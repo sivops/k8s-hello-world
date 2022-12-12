@@ -14,9 +14,9 @@ docker push <hub-user>/<repo-name>[:<tag>]
 ```
 Note: Make sure you are logged in docker hub on local using ```docker login``` to run above commands
 ## Deployment
-Here I am using minikube so run `minikube start` to start the k8s cluster
-Now change the directory to k8s folder and apply the `deploy.yaml` and `svc.yaml`
-Note: make sure to change the image name if you created the docker image of your choice
+Here I am using minikube so run `minikube start` to start the k8s cluster \
+Now change the directory to k8s folder and apply the `deploy.yaml` and `svc.yaml` \
+Note: make sure to change the image name if you created the docker image of your choice \
 After applying the files, you will see pods and service running as shown in below sample output
 ```
 ➜  ~ kubectl get po
@@ -29,7 +29,7 @@ sample-go-app-svc   NodePort    10.107.59.170   <none>        3000:30370/TCP   4
 ➜  ~
 ```
 ## Test the deployment
-To test the k8s deployment, I always use port-forward method as below explains
+To test the k8s deployment, I always use port-forward method as below explains \
 Run the below k8s command to port-forward the deployment to your local
 ```
 kubectl port-forward service/sample-go-app-svc 9000:3000
